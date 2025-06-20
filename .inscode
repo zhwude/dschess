@@ -1,0 +1,4 @@
+run = "tar -czvf gomoku-final.tar.gz -T files.txt"
+is_gui = false
+is_resident = false
+is_html = false

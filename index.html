@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双人五子棋对战</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/daisyui/4.12.10/full.min.css" rel="stylesheet">
+    <style>
+        #game-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        canvas {
+            background-color: #f0d9b5;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">双人五子棋对战</h1>
+            <p class="text-gray-600 mt-2">邀请好友一起玩五子棋</p>
+        </div>
+
+        <div id="game-container" class="bg-white rounded-lg shadow-lg p-6">
+            <div class="flex justify-between items-center mb-4">
+                <div id="status" class="text-lg font-semibold">等待连接...</div>
+                <button id="share-btn" class="btn btn-primary btn-sm">分享游戏</button>
+            </div>
+            
+            <div class="flex justify-center">
+                <canvas id="board" width="450" height="450"></canvas>
+            </div>
+            
+            <div class="mt-4 flex justify-center">
+                <button id="restart-btn" class="btn btn-outline btn-sm">重新开始</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
